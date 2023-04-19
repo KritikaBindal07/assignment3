@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../training/style.css">
+    <title> SURVEY FORM </title>
+
+    <style>
+        .border{
+            
+            border-color: black;
+            border: 5px solid saddlebrown;
+            
+        }
+
+        .color{
+            background-color: blue;
+        }
+
+        .text{
+            border-top-right-radius: 20px ;
+            border-bottom-left-radius: 10px;
+            border-color: black;
+            border: 3px solid blue;
+        }
+
+        .field{
+            border-radius: 20px;
+            border: 4px solid black;
+        }
+
+        .name{
+            padding: 10px;
+            background-color:bisque;
+            border-radius: 10px;
+        }
+
+        .button{
+            padding: 10px;
+            border-radius: 12px;
+            background-color: blueviolet;
+        }
+
+        .bg{
+            background-image: url("data:image/jpeg;base64,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");
+
+            height: 100%;
+
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+  ;
+
+    </style>
+</head>
+<body class="bg">
+    <form align="center" action="https://enw7u145b8im9.x.pipedream.net/" method="post" >
+
+        <h1> SURVEY FORM </h1> <br> <br>
+        
+            <fieldset class="field text" align="center">
+
+            <legend class="name"> <b> NAME </b></legend> <BR>
+            <label   style="font-size: larger; "  for="FirstName">  <b>  First Name </b> </label> &nbsp;&nbsp;
+            <input class="border text"  size="30" type="text" name="first_name" id="FirstName" required> <br> <br>
+
+            <label  style="font-size: larger; "  for="LastName">  <b>  Last Name </b> </label> &nbsp;&nbsp;
+            <input  class="border text"  size="30" type="text" name="last_name" id="LastName" required> <br> <br>
+
+            
+
+
+
+
+        </fieldset> <br> <br> 
+
+        <fieldset class="field" align="center">
+
+            <legend class="name"> <b> ADDRESS </b></legend> <br>
+            <label  style="font-size: larger; "  for="street">  <b>  street </b> </label> &nbsp;&nbsp;
+            <input  class="border text"  size="30" type="text" name="street_address" id="street" required> <br> <br>
+
+            <label  style="font-size: larger; "  for="city">  <b> city </b> </label> &nbsp;&nbsp;&nbsp;
+            <input  class="border text"  size="30" type="text" name="city" id="city" required> <br> <br>
+
+            <label  style="font-size: larger; "  for="pincode">  <b> pin code </b> </label> &nbsp;&nbsp;
+            <input   class="border text"  type="number" name="pincode" id="pincode" required> <br> <br>
+
+            <label  style="font-size: larger; "  for="state">  <b>  state </b> </label> &nbsp;&nbsp;
+            <input  class="border text"  size="30" type="text" name="state" id="state" required> <br> <br>
+
+            
+            </fieldset> <br> <br>
+
+            <label  style="font-size: larger; "  for="contact">  <b> contact number </b> </label> &nbsp;&nbsp;
+            <input  class="border text"   type="number" name="contact_number" id="contact" required> <br> <br> <br>
+
+            <fieldset class="field"> 
+                <legend class="name"> <b> RATING </b></legend> 
+                <h3> Quality of products received </h3> 
+
+                <label style="font-size: larger; "  for="excellent">  Execellent  </label> 
+                <input  type="radio" name="quality_of_prducts_received_rating" value="bad" id="excellent" required>&nbsp;&nbsp;
+
+                <label  style="font-size: larger; "  for="good"> Good  </label> 
+                <input    type="radio" name="quality_of_prducts_received_rating" value="bad" id="good" required>&nbsp;&nbsp;
+
+                <label  style="font-size: larger; "  for="bad"> Bad  </label> 
+                <input    type="radio" name="quality_of_prducts_received_rating" value="bad" id="bad" required> <br> <br>
+
+                <h3> Delivery </h3> 
+                <label  style="font-size: larger; "  for="excellent">  Execellent  </label> 
+                <input  type="radio" value="excellent" name="delivery_rating" id="excellent" required>&nbsp;&nbsp;
+
+                <label  style="font-size: larger; "  for="good"> Good  </label> 
+                <input  type="radio" value="good" name="delivery_rating" id="good" required>&nbsp;&nbsp;
+
+                <label  style="font-size: larger; "  for="bad"> Bad  </label> 
+                <input  type="radio" value="bad" name="delivery_rating" id="bad" required> <br> <br>
+
+                <h3> Value for money </h3> 
+                <label  style="font-size: larger; "  for="excellent">  Execellent  </label> 
+                <input    type="radio" value="excellent" name="value_for_money_rating" id="excellent" required>&nbsp;&nbsp;
+
+                <label  style="font-size: larger; "  for="good"> Good  </label> 
+                <input  type="radio" value="good" name="value_for_money_rating" id="good" required>&nbsp;&nbsp;
+
+                <label  style="font-size: larger; "  for="bad"> Bad  </label> 
+                <input  type="radio" value="bad" name="value_for_money_rating" id="bad" required> <br> <br>
+
+               
+            </fieldset> <br> <br> <br>
+
+            <input class="button"  type="submit" value="submit"/> 
+
+
+
+         </form>
+    
+</body>
+</html>
